@@ -1,5 +1,6 @@
 .media {
   @include flexbox(flex-start, flex-start);
+  cursor: pointer;
 
   &__image {
     width: 150px;

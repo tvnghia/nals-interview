@@ -1,5 +1,6 @@
 const state = {
-  blogs: []
+  blogs: [],
+  blog: {}
 }
 
 export default state

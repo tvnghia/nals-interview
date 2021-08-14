@@ -38,6 +38,7 @@ export default {
   methods: {
     onClickPagination(page) {
       if (page === parseInt(this.$route.query.page)) return
+      
       this.PAGINATION.forEach((item) => {
         item.active = false
       })

@@ -10,10 +10,13 @@
     <sort-form @on-sort-blogs="onSortBlogs" />
 
     <ul v-if="blogs.length > 0" class="u-pt-40">
-      <li 
+      <router-link 
         v-for="item in blogs" 
         :key="item.id" 
         class="media"
+        tag="li"
+        :to="`/blogs/${item.id}`"
+        exact
       >
         <img class="media__image" :src="item.image" alt="image" />
         <div class="media__body">
@@ -21,7 +24,7 @@
           <p class="u-mt-8">{{ item.content }}</p>
           <p class="headline--sm u-mt-8">Created at: {{ $filters.moment_yyyy_mm_dd(item.createdAt) }}</p>
         </div>
-      </li>
+      </router-link>
     </ul>
 
     <p v-else class="u-mt-16 headline--md">Have no blogs</p>
