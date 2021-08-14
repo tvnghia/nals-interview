@@ -1,0 +1,15 @@
+// Font family
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto !default;
+$fallback-font-family: 'Helvetica Neue', sans-serif !default;
+$body-font-family: $base-font-family, $fallback-font-family !default;
+
+// Font size - line height
+$font-size-base: 16px !default;
+$font-size-xl: 32px !default;
+$font-size-lg: 24px !default;
+$font-size-md: 22px !default;
+$font-size-sm: 14px !default;
+$font-size-xs: 12px !default;
+$font-size-xxs: 10px !default;
+$body-font-size: $font-size-base !default;
+$body-line-height: 1.5 !default;
