@@ -1,0 +1,22 @@
+.nav {
+  @include flexbox(flex-start, center);
+
+  &__item {
+    padding: 8px;
+    background-color: $color-gray-300;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-gray-400;
+    }
+
+    & + & {
+      margin-left: 8px;
+    }
+
+    &.active {
+      background-color: $color-blue-300;
+    }
+  }
+}

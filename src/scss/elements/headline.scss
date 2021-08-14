@@ -1,0 +1,25 @@
+%headline {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.headline--lg {
+  @extend %headline;
+  font-size: $font-size-lg;
+}
+
+.headline--base {
+  @extend %headline;
+  font-size: $font-size-base;
+}
+
+.headline--md {
+  @extend %headline;
+  font-size: $font-size-md;
+}
+
+.headline--sm {
+  @extend %headline;
+  font-size: $font-size-sm;
+  font-weight: 400;
+}

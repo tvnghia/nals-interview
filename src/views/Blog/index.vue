@@ -1,9 +1,11 @@
 <template>
-  <p>Footer</p>
+  <p>id</p>
 </template>
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Blog'
 }
 </script>
+
+<style></style>

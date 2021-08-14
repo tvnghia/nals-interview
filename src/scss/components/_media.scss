@@ -1,0 +1,17 @@
+.media {
+  @include flexbox(flex-start, flex-start);
+
+  &__image {
+    width: 150px;
+    border-radius: 2px;
+    margin-right: 16px;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  & + & {
+    margin-top: 16px;
+  }
+}

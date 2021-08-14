@@ -1,13 +1,9 @@
 <template>
-  <p>Home page...</p>
+  <p class="u-mt-40 headline--lg">Home page...</p>
 </template>
 
 <script>
 export default {
-
+  name: 'Home'
 }
 </script>
-
-<style>
-
-</style>

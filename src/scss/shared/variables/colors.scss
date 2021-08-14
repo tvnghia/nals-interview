@@ -1,17 +1,17 @@
 // Core colors
-$primary-color: #01d167 !default;
-$secondary-color: #0c365a !default;
-$terrafy-color: #23cefd !default;
 $dark-color: #222 !default;
 $light-color: #fff !default;
 
-// Status corlors
-$info-color: #0c365a !default;
-$success-color: $primary-color !default;
-$warning-color: #fc9f00 !default;
-$danger-color: #fc4e5c !default;
-
-$gray-color: #ddd !default;
-$gray-scale-1: rgba(255, 255, 255, 1) !default;
-
 $body-font-color: $dark-color !default;
+
+// blue
+$color-blue-200: #dbebfc;
+$color-blue-300: #abcdf4;
+$color-blue-400: #5e9ce3;
+
+// gray
+$color-gray-100: #fafafa;
+$color-gray-300: #e8e8e8;
+$color-gray-400: #d8d8d8;
+$color-gray-700: #808080;
+$color-gray-900: #292929;

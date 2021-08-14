@@ -1,4 +1,17 @@
+// variables
 @import './shared/variables';
 
+// mixins
+@import './shared/mixins';
+
+// base
 @import './base/base';
-@import './components/index.scss'
+
+// components
+@import './components/index.scss';
+
+// elements
+@import './elements/index.scss';
+
+// shared
+@import './shared/utils'

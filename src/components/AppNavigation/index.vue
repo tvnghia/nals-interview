@@ -1,20 +1,7 @@
 <template>
-  <ul>
-    <router-link
-      tag="li"
-      to="/"
-      exact
-    >
-      Home
-    </router-link>
-
-    <router-link
-      tag="li"
-      to="/articles"
-      exact
-    >
-      Articles
-    </router-link>
+  <ul class="nav">
+    <router-link tag="li" class="nav__item" to="/" exact> Home </router-link>
+    <router-link tag="li" class="nav__item" to="/blogs"> Blogs </router-link>
   </ul>
 </template>
 

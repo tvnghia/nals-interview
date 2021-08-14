@@ -1,0 +1,27 @@
+.pagination {
+  @include flexbox(flex-start, center);
+  border: 1px solid $color-gray-300;
+  border-radius: 4px;
+
+  &__item {
+    padding: 8px 12px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $color-gray-300;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid $color-gray-300;
+    }
+
+    &.active {
+      background-color: $color-blue-300;
+    }
+
+    &.disabled {
+      background-color: $color-gray-400;
+      cursor: not-allowed;
+    }
+  }
+}
