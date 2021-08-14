@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       sortOption: SORT_RADIOS,
-      picked: 'none'
+      picked: this.$route.query.order || 'none'
     }
   },
 
