@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header />
-    
+  
     <app-navigation />
 
     <slot />
