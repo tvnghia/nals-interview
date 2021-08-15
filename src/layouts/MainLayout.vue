@@ -6,7 +6,7 @@
 </template>
 
 <script>
-const AppNavigation = () => import('@/components/AppNavigation')
+import AppNavigation from '@/components/AppNavigation'
 
 export default {
   name: 'MainLayout',

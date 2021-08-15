@@ -1,34 +1,34 @@
 <template>
-  <input 
-    @input="onSearch" 
-    class="form-control u-w-300 u-mr-16" 
-    type="text" 
-    :value="currentSearchKey" />
+  <input class="form-control u-w-300 u-mr-16" type="text" v-model="valueSearch" />
 </template>
 
 <script>
 import debounceSearch from '@/mixins/debounce-search'
+
+const TIME_DEBOUNCE = 1000
 
 export default {
   name: 'SearchForm',
 
   mixins: [debounceSearch],
 
-  computed: {
-    currentSearchKey() {
-      return this.$route.query.search
+  data() {
+    return {
+      valueSearch: ''
     }
   },
 
-  methods: {
-    onSearch(e) {
-      const TIME_DEBOUNCE = 1000
-      this.handleDebounceSearch(this.emitValueSearch, e.target.value, TIME_DEBOUNCE)
-    },
-
-    emitValueSearch(searchKey) {
-      this.$emit('on-search-blogs', searchKey)
+  watch: {
+    valueSearch: {
+      handler(value) {
+        // redirect to page 1 when searching
+        this.handleDebounceSearch(() => this.$emit('on-search-blogs', { search: encodeURI(value), page: 1 }), value, TIME_DEBOUNCE)
+      }
     }
+  },
+
+  created() {
+    this.valueSearch = this.$route.query.search || ''
   }
 }
 </script>

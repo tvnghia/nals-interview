@@ -7,7 +7,7 @@
 </template>
 
 <script>
-const MainLayout = () => import('@/layouts/MainLayout')
+import MainLayout from '@/layouts/MainLayout'
 
 export default {
   name: 'App',

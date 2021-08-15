@@ -2,19 +2,10 @@
   <div class="sort-form u-mt-16">
     <p class="sort-form__title">Sort blogs:</p>
 
-    <div 
-      v-for="item in sortOption" 
-      :key="item.index" 
-      class="u-flex u-items-center"
-    >
-      <input 
-        type="radio" 
-        name="sort_blogs"
-        :id="item.value"
-        :value="item.value"
-        v-model="picked" />
+    <div v-for="option in sortOption" :key="option.index" class="u-flex u-items-center">
+      <input type="radio" name="sort_blogs" :id="option.id" :value="option.value" v-model="picked" />
 
-      <label :for="item.value">{{ item.label }}</label>
+      <label :for="option.id">{{ option.label }}</label>
     </div>
   </div>
 </template>
@@ -25,20 +16,25 @@ import { SORT_RADIOS } from './constant'
 export default {
   name: 'SortForm',
 
+  props: {
+    value: {
+      type: String,
+      required: true
+    }
+  },
+
   data() {
     return {
       sortOption: SORT_RADIOS,
-      picked: this.$route.query.order || 'none'
+      picked: this.value
     }
   },
 
   watch: {
     picked: {
       handler(value) {
-        this.$emit('on-sort-blogs', value)
-      },
-
-      deep: true
+        this.$emit('input', value)
+      }
     }
   }
 }

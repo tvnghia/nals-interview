@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/blogs/:id',
     name: 'blog',
-    component: lazyLoadRoute('Blog'),
+    component: lazyLoadRoute('Blogs/_id'),
     meta: { title: `Blog - ${appName}` }
   },
   {

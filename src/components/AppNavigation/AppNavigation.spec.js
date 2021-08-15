@@ -9,7 +9,9 @@ describe('AppNavigation.vue', () => {
     wrapper = shallowMount(AppNavigation, wrapperOps)
   })
 
-  afterEach(() => { wrapper.vm.$destroy() })
+  afterEach(() => {
+    wrapper.vm.$destroy()
+  })
 
   describe('when AppNavigation was mounted', () => {
     it('should AppNavigation render correctly', () => {

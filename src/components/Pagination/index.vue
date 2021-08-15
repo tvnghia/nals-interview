@@ -1,49 +1,51 @@
 <template>
   <ul class="pagination">
-    <li 
-      v-for="item in PAGINATION" 
-      :key="item.index" 
-      @click="onClickPagination(item.page)" 
-      :class="['pagination__item', { disabled: item.disabled, active: item.active }]"
+    <li
+      v-for="page in pages"
+      :key="page.index"
+      @click="clickPagination(page.page)"
+      :class="['pagination__item', { active: page.active }]"
     >
-      <a class="pagination__link">{{ item.page }}</a>
+      <a class="pagination__link">{{ page.page }}</a>
     </li>
   </ul>
 </template>
 
 <script>
+const PAGE_TOTAL_DUMMY = 5
+
 export default {
   name: 'Pagination',
 
-  data() {
-    return {
-      // PAGINATION
+  props: {
+    value: {
+      type: Number,
+      require: true
     }
   },
 
   computed: {
-    PAGINATION() {
-      let PAGINATION = []
-      for (let i = 0; i < 5; i++) {
-        PAGINATION.push({
-          disabled: false,
-          active: parseInt(this.$route.query.page) === i + 1,
+    pages() {
+      const pages = []
+      for (let i = 0; i < PAGE_TOTAL_DUMMY; i++) {
+        pages.push({
+          active: this.currentPage === i + 1,
           page: i + 1
         })
       }
-      return PAGINATION
+      return pages
+    },
+
+    currentPage() {
+      return parseInt(this.$route.query.page)
     }
   },
 
   methods: {
-    onClickPagination(page) {
-      if (page === parseInt(this.$route.query.page)) return
-      
-      this.PAGINATION.forEach((item) => {
-        item.active = false
-      })
-      this.PAGINATION[page - 1].active = true
-      this.$emit('on-click-pagination', page)
+    clickPagination(page) {
+      if (page === this.currentPage) return
+
+      this.$emit('input', page)
     }
   }
 }
