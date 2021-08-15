@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNavigation.vue when AppNavigation was mounted should AppNavigation render correctly 1`] = `
+<ul class="nav">
+  <router-link-stub to="/" tag="li" exact="true" ariacurrentvalue="page" event="click" class="nav__item">Home</router-link-stub>
+  <router-link-stub to="/blogs" tag="li" ariacurrentvalue="page" event="click" class="nav__item">Blogs</router-link-stub>
+</ul>
+`;
