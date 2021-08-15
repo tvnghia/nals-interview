@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue when Home was mounted should Home render correctly 1`] = `<p class="u-mt-40 headline--lg">Home page...</p>`;

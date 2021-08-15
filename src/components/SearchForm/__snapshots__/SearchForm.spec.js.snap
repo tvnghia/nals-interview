@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm.vue when SearchForm was mounted should SearchForm render correctly 1`] = `<input type="text" class="form-control u-w-300 u-mr-16">`;

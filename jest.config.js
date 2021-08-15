@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverage: true,
-  collectCoverageFrom: ['src/{components,pages,store}/*.{js,vue}'],
+  collectCoverageFrom: ['src/{components,views,layouts,store}/*.{js,vue}'],
   coverageDirectory: '<rootDir>/tests/coverage/',
   coverageReporters: ['html', 'text-summary'],
   clearMocks: true,

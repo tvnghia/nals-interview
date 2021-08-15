@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogItem.vue when BlogItem was mounted should BlogItem render correctly 1`] = `
+<div class="media u-mt-16"><img src="http://lorempixel.com/640/480/abstract" alt="blog image" class="media__image">
+  <div class="media__body">
+    <p class="headline--md">Oklahoma</p>
+    <p class="u-mt-8">content</p>
+    <p class="headline--sm u-mt-8">Created at: 2020/09/08</p>
+  </div>
+</div>
+`;

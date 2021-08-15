@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blogs.vue when Blogs was mounted should render correctly 1`] = `
+<div class="u-mt-32">
+  <h1 class="headline--lg">My blogs</h1>
+  <div class="u-flex u-items-center u-mt-16"><input type="text" class="form-control u-w-300 u-mr-16">
+    <ul class="pagination">
+      <li class="pagination__item active"><a class="pagination__link">1</a></li>
+      <li class="pagination__item"><a class="pagination__link">2</a></li>
+      <li class="pagination__item"><a class="pagination__link">3</a></li>
+      <li class="pagination__item"><a class="pagination__link">4</a></li>
+      <li class="pagination__item"><a class="pagination__link">5</a></li>
+    </ul>
+  </div>
+  <div class="sort-form u-mt-16">
+    <p class="sort-form__title">Sort blogs:</p>
+    <div class="u-flex u-items-center"><input type="radio" name="sort_blogs" id="1" value="asc"> <label for="1">Ascending</label></div>
+    <div class="u-flex u-items-center"><input type="radio" name="sort_blogs" id="2" value="desc"> <label for="2">Descending</label></div>
+  </div>
+  <p class="u-mt-16 headline--md">Have no blog</p>
+</div>
+`;

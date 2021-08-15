@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainLayout.vue when MainLayout was mounted should render correctly 1`] = `
+<div>
+  <app-navigation-stub></app-navigation-stub>
+  <p class="default-scoped">Scope slot</p>
+</div>
+`;

@@ -22,7 +22,11 @@ export default {
     valueSearch: {
       handler(value) {
         // redirect to page 1 when searching
-        this.handleDebounceSearch(() => this.$emit('on-search-blogs', { search: encodeURI(value), page: 1 }), value, TIME_DEBOUNCE)
+        this.handleDebounceSearch(
+          () => this.$emit('on-search-blogs', { search: encodeURI(value), page: 1 }),
+          value,
+          TIME_DEBOUNCE
+        )
       }
     }
   }
