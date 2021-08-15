@@ -14,7 +14,7 @@ export default {
 
   data() {
     return {
-      valueSearch: ''
+      valueSearch: this.$route.query.search || ''
     }
   },
 
@@ -25,10 +25,6 @@ export default {
         this.handleDebounceSearch(() => this.$emit('on-search-blogs', { search: encodeURI(value), page: 1 }), value, TIME_DEBOUNCE)
       }
     }
-  },
-
-  created() {
-    this.valueSearch = this.$route.query.search || ''
   }
 }
 </script>
