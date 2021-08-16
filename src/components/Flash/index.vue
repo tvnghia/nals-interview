@@ -45,7 +45,7 @@ export default {
   }
 
   // &--sucess {
-    // for success action
+  // for success action
   // }
 }
 </style>
